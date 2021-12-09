@@ -1,0 +1,41 @@
+/* .first {
+  text-align: left;
+  text-emphasis: none;
+  font-size: 25px;
+  position: fixed;
+  text-align: left;
+  padding: 28px 32px;
+
+  z-index: 3;
+  transition: all 1s ease;
+}
+
+
+
+ */
+
+.first {
+  padding-top: 32px;
+  text-align: left;
+  position: absolute;
+  width: 299px;
+  height: 68px;
+  left: calc(50% - 450px / 2 - 469.5px);
+  top: calc(50% - 68px / 2 - 562.5px);
+
+  /* Heading / Desktop / H2 */
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 160%;
+  /* identical to box height, or 67px */
+
+  display: flex;
+  align-items: left;
+
+  /* --c-text */
+
+  color: #1d1f22;
+}

@@ -13,7 +13,7 @@
 }
 
 .wrapper {
-  padding: 10px 30px;
+  padding: 28px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,8 +23,40 @@
   display: flex;
 }
 
+/* .navbtn {
+  padding-right: 32px;
+} */
+
 .navbtn {
   padding-right: 32px;
+  position: static;
+  height: 20px;
+  left: 0%;
+  right: 0%;
+  top: calc(50% - 20px / 2 - 16px);
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  /* identical to box height, or 19px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* --c-primary */
+
+  color: #5ece7b;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 30px 0px;
 }
 
 /* .left {
