@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import Welcome from "./components/category.jsx"
 import Topbar from "./components/topbar/topbar"
 import Bodybar from "./components/category/category"
+import Product from "./components/productpage/product"
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Welcome />
         <Topbar />
         <Bodybar />
+        <Product />
       </div>
     )
   }

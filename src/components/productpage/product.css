@@ -1,0 +1,47 @@
+.second {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+
+  position: static;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  height: 444px;
+  width: 386px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  padding: 16px;
+
+  /* --c-white */
+
+  background: #ffffff;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+/* .prod-pic {
+  padding-top: 80px;
+  position: absolute;
+  left: -4.17%;
+  right: -119.44%;
+  top: -90.51%;
+  bottom: 0%;
+  height: 361.38037109375px;
+  width: 791.5833129882812px;
+  left: -14.75px;
+  top: -31.38037109375px;
+  border-radius: 0px;
+
+  /* background: url(image.png); */
+/* } */
