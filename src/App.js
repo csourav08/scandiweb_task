@@ -4,6 +4,7 @@ import Welcome from "./components/category.jsx"
 import Topbar from "./components/topbar/topbar"
 import Bodybar from "./components/category/category"
 import Product from "./components/productpage/product"
+// import Counter from "./components/test/counter"
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Topbar />
         <Bodybar />
         <Product />
+        {/* <Counter /> */}
       </div>
     )
   }
