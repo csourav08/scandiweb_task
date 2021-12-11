@@ -47,11 +47,18 @@ class Category extends Component {
             return (
               <div className="itemContainer">
                 <div className="imageContainer">
-                  <img className="productImage" src={product.gallery[0]} alt="" />
+                  <a href="">
+                    <img className="productImage" src={product.gallery[0]} alt="" />
+                  </a>
                 </div>
                 <div>
-                  <h3 className="productName">{product.name}</h3>
-                  <h4 className="productPrice">${product.prices[0].amount}</h4>
+                  <h3 className="productName">
+                    {" "}
+                    <a href="">{product.name}</a>
+                  </h3>
+                  <h4 className="productPrice">
+                    <a href="">${product.prices[0].amount}</a>
+                  </h4>
                 </div>
               </div>
             )
