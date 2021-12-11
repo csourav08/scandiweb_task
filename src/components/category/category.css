@@ -1,14 +1,5 @@
 .productImage {
-  /* box-sizing: content-box; */
-
-  /* display: flex; */
-  /* padding-top: 120px; */
-  /* flex-direction: column; */
-
   height: 200px;
-
-  /* left: auto; */
-  /* text-align: left; */
   align-self: flex-start;
 }
 
@@ -25,32 +16,26 @@
   font-weight: 400;
   font-size: 42px;
   line-height: 67px;
-  /* padding-top: 160px;
-  text-align: left;
-  padding-left: 30px; */
 }
 
 .categoryContainer {
-  padding-top: 120px;
+  padding-top: 90px;
+  font-weight: 400;
+  size: 42px;
+  line-height: 67.2px;
 }
 
 .productName {
   margin: 0px;
   margin-top: 24px;
   text-align: left;
-  /* box-sizing: content-box;
-
-  display: flex;
-  padding-left: 21px; */
+  font: Raleway;
 }
 
 .productPrice {
   margin: 0px;
   text-align: left;
-  /* box-sizing: content-box;
-
-  display: flex;
-  padding-left: 21px; */
+  margin-top: -40px;
 }
 
 .parent {
@@ -58,17 +43,10 @@
   flex-wrap: wrap;
   padding-left: 100px;
   padding-right: 100px;
-  /* align-self: flex-start; */
-  /* margin-top: 50px; */
 }
 
 .itemContainer {
   flex: 1 0 30%;
-  margin: 5px;
 
-  /* display: flex;
-  justify-content: space-between; */
-  /* display: flex; */
-  /* height: 100px; */
-  /* background-color:; */
+  margin: 5px;
 }

@@ -8,18 +8,18 @@ class Topbar extends Component {
         <div className="wrapper">
           <div className="container">
             <div>
-              <a href="#Women" className="navbtn">
-                Women
+              <a href="#Phones" className="navbtn">
+                Phones
               </a>
             </div>
             <div>
-              <a href="#Men" className="navbtn">
-                Men
+              <a href="#Clothes" className="navbtn">
+                Clothes
               </a>
             </div>
             <div>
-              <a href="#Kids" className="navbtn">
-                Kids
+              <a href="#Computers" className="navbtn">
+                Computers
               </a>
             </div>
           </div>

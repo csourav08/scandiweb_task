@@ -33,7 +33,7 @@ class Category extends Component {
         `
       })
       .then(result => {
-        this.setState({ products: result.data.category.products }) // ctaegory and product from inspect element
+        this.setState({ products: result.data.category.products })
       })
   }
 
