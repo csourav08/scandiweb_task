@@ -1,41 +1,74 @@
-/* .first {
-  text-align: left;
-  text-emphasis: none;
-  font-size: 25px;
-  position: fixed;
-  text-align: left;
-  padding: 28px 32px;
+.productImage {
+  /* box-sizing: content-box; */
 
-  z-index: 3;
-  transition: all 1s ease;
+  /* display: flex; */
+  /* padding-top: 120px; */
+  /* flex-direction: column; */
+
+  height: 200px;
+
+  /* left: auto; */
+  /* text-align: left; */
+  align-self: flex-start;
 }
 
-
-
- */
-
-.first {
-  padding-top: 0px;
+.imageContainer {
   text-align: left;
-  position: absolute;
-  width: 299px;
-  height: 68px;
-  left: calc(50% - 450px / 2 - 469.5px);
-  top: calc(50% - 68px / 2 - 562.5px);
+}
 
-  /* Heading / Desktop / H2 */
+.categoryName {
+  text-align: left;
+  padding-left: 32px;
 
   font-family: Raleway;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 42px;
-  line-height: 20%;
-  /* identical to box height, or 67px */
+  line-height: 67px;
+  /* padding-top: 160px;
+  text-align: left;
+  padding-left: 30px; */
+}
+
+.categoryContainer {
+  padding-top: 120px;
+}
+
+.productName {
+  margin: 0px;
+  margin-top: 24px;
+  text-align: left;
+  /* box-sizing: content-box;
 
   display: flex;
-  align-items: left;
+  padding-left: 21px; */
+}
 
-  /* --c-text */
+.productPrice {
+  margin: 0px;
+  text-align: left;
+  /* box-sizing: content-box;
 
-  color: #1d1f22;
+  display: flex;
+  padding-left: 21px; */
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+  /* align-self: flex-start; */
+  /* margin-top: 50px; */
+}
+
+.itemContainer {
+  flex: 1 0 30%;
+  margin: 5px;
+
+  /* display: flex;
+  justify-content: space-between; */
+  /* display: flex; */
+  /* height: 100px; */
+  /* background-color:; */
 }

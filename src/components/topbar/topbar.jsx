@@ -25,14 +25,14 @@ class Topbar extends Component {
           </div>
 
           <div className="container">
-            <img className="profile-photo" src={require("../../images/logo.jpeg")} alt={"Logo"} />
+            <img className="logo" src={require("../../images/logo.jpeg")} alt={"Logo"} />
           </div>
           <div className="container">
             <div>
-              <img className="profile-photo" src={require("../../images/currency.png")} alt={"currency"} />
+              <img className="currency" src={require("../../images/currency.png")} alt={"currency"} />
             </div>
             <div>
-              <img className="profile-photo" src={require("../../images/cart.png")} alt={"cart"} />
+              <img className="cart" src={require("../../images/cart.png")} alt={"cart"} />
             </div>
           </div>
         </div>
