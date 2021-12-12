@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import "./topbar.css"
 
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom" //copy
+// import { Routes } from "react-router-dom" //copy
+
 class Topbar extends Component {
   render() {
     return (
@@ -34,6 +37,19 @@ class Topbar extends Component {
             <div>
               <img className="cart" src={require("../../images/cart.png")} alt={"cart"} />
             </div>
+            {/* <Router> 
+              <Routes>
+                <Route path="/Phones">
+                  <Phones />
+                </Route>
+                <Route path="/Clothes">
+                  <Clothes />
+                </Route>
+                <Route path="/Computers">
+                  <Computers />
+                </Route>
+              </Routes>
+            </Router> */}
           </div>
         </div>
       </div>
@@ -41,34 +57,3 @@ class Topbar extends Component {
   }
 }
 export default Topbar
-
-// export default function Topbar({ menuOpen, setMenuOpen }) {
-//   return (
-//     <div className={"topbar " + (menuOpen && "active")}>
-//       <div className="wrapper">
-//         <div className="left">
-//           <a href="#intro" className="logo">
-//             genius.
-//           </a>
-//           <div className="itemContainer">
-//             {/* <Person className="icon" /> */}
-//             <span>+44 924 12 74</span>
-//           </div>
-//           <div className="itemContainer">
-//             {/* <Mail className="icon" /> */}
-//             <span>safak@genius.com</span>
-//           </div>
-//         </div>
-//         <div className="right">
-//           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-//             <span className="line1"></span>
-//             <span className="line2"></span>
-//             <span className="line3"></span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// // export default Topbar

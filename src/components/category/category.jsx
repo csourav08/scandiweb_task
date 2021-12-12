@@ -1,7 +1,9 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import { gql } from "@apollo/client"
+
 import "./category.css"
 import { client } from "../../index"
-import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, gql } from "@apollo/client"
 
 class Category extends Component {
   constructor(props) {
@@ -45,22 +47,17 @@ class Category extends Component {
         <div className="parent">
           {this.state.products.map(product => {
             return (
-              <div className="itemContainer">
-                <div className="imageContainer">
-                  <a href="">
+              <Link key={product.name} to={`/products/${product.id}`}>
+                <div className="itemContainer">
+                  <div className="imageContainer">
                     <img className="productImage" src={product.gallery[0]} alt="" />
-                  </a>
+                  </div>
+                  <div>
+                    <h3 className="productName">{product.name}</h3>
+                    <h4 className="productPrice">${product.prices[0].amount}</h4>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="productName">
-                    {" "}
-                    <a href="">{product.name}</a>
-                  </h3>
-                  <h4 className="productPrice">
-                    <a href="">${product.prices[0].amount}</a>
-                  </h4>
-                </div>
-              </div>
+              </Link>
             )
           })}
         </div>
