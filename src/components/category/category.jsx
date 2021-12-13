@@ -5,11 +5,30 @@ import { gql } from "@apollo/client"
 import "./category.css"
 import { client } from "../../index"
 
+export const getCurrencyIndex = currency => {
+  switch (currency) {
+    case "USD":
+      return 0
+    case "GBP":
+      return 1
+    case "AUD":
+      return 2
+    case "JPY":
+      return 3
+    case "RUB":
+      return 4
+
+    default:
+      return 0
+  }
+}
+
 class Category extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: []
+      products: [],
+      selectedCurrency: localStorage.getItem("selectedCurrency")
     }
   }
 
@@ -37,10 +56,16 @@ class Category extends Component {
       .then(result => {
         this.setState({ products: result.data.category.products })
       })
+
+    setInterval(() => {
+      this.setState({ selectedCurrency: localStorage.getItem("selectedCurrency") })
+    }, 1000)
   }
 
   render() {
     console.log(this.state.products)
+    const currencyIndex = getCurrencyIndex(this.state.selectedCurrency)
+
     return (
       <div className="categoryContainer">
         <div className="categoryName">Category Name</div>
@@ -54,7 +79,7 @@ class Category extends Component {
                   </div>
                   <div>
                     <h3 className="productName">{product.name}</h3>
-                    <h4 className="productPrice">${product.prices[0].amount}</h4>
+                    <h4 className="productPrice">{`${this.state.selectedCurrency} ${product.prices[currencyIndex].amount}`}</h4>
                   </div>
                 </div>
               </Link>

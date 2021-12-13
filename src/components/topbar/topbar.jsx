@@ -5,6 +5,20 @@ import "./topbar.css"
 // import { Routes } from "react-router-dom" //copy
 
 class Topbar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showCurrencyModal: false
+    }
+  }
+
+  toggleShowCurrencyModal = () => this.setState({ showCurrencyModal: !this.state.showCurrencyModal })
+
+  onSelectCurrency = currency => {
+    localStorage.setItem("selectedCurrency", currency)
+    this.toggleShowCurrencyModal()
+  }
+
   render() {
     return (
       <div className={"topbar"}>
@@ -31,7 +45,7 @@ class Topbar extends Component {
             <img className="logo" src={require("../../images/logo.jpeg")} alt={"Logo"} />
           </div>
           <div className="container">
-            <div>
+            <div onClick={() => this.toggleShowCurrencyModal()}>
               <img className="currency" src={require("../../images/currency.png")} alt={"currency"} />
             </div>
             <div>
@@ -39,6 +53,15 @@ class Topbar extends Component {
             </div>
           </div>
         </div>
+        {this.state.showCurrencyModal && (
+          <div className="currencyModal">
+            <div onClick={() => this.onSelectCurrency("USD")}>USD</div>
+            <div onClick={() => this.onSelectCurrency("GBP")}>GBP</div>
+            <div onClick={() => this.onSelectCurrency("AUD")}>AUD</div>
+            <div onClick={() => this.onSelectCurrency("JPY")}>JPY</div>
+            <div onClick={() => this.onSelectCurrency("RUB")}>RUB</div>
+          </div>
+        )}
       </div>
     )
   }

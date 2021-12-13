@@ -62,3 +62,12 @@
 .cart {
   padding-right: 32px;
 }
+
+.currencyModal {
+  position: absolute;
+  width: 114px;
+  height: 169px;
+  background-color: #ffffff;
+  left: 1248px;
+  top: 65px;
+}
