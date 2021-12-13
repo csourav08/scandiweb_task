@@ -1,3 +1,5 @@
 .productContainer {
   padding-top: 90px;
+  width: auto;
+  text-align-last: left;
 }
