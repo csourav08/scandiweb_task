@@ -37,19 +37,6 @@ class Topbar extends Component {
             <div>
               <img className="cart" src={require("../../images/cart.png")} alt={"cart"} />
             </div>
-            {/* <Router> 
-              <Routes>
-                <Route path="/Phones">
-                  <Phones />
-                </Route>
-                <Route path="/Clothes">
-                  <Clothes />
-                </Route>
-                <Route path="/Computers">
-                  <Computers />
-                </Route>
-              </Routes>
-            </Router> */}
           </div>
         </div>
       </div>

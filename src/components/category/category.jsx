@@ -50,7 +50,7 @@ class Category extends Component {
               <Link key={product.name} to={`/products/${product.id}`}>
                 <div className="itemContainer">
                   <div className="imageContainer">
-                    <img className="productImage" src={product.gallery[0]} alt="" />
+                    <img className="productImage" src={product.gallery[0]} alt="product image" />
                   </div>
                   <div>
                     <h3 className="productName">{product.name}</h3>

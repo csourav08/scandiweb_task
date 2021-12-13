@@ -8,32 +8,39 @@ class ProductDetails extends Component {
     super(props)
     this.state = {
       productId: window.location.pathname.replace("/products/", ""),
-      productdetails: {}
+      productdetails: null
     }
   }
 
   componentDidMount() {
+    const id = this.state.productId
+
     client
       .query({
         query: gql`
-          query {
-            product(id: "jacket-canada-goosee") {
+          query product($id: String!) {
+            product(id: $id) {
               description
+              gallery
+              brand
             }
           }
-        `
+        `,
+        variables: { id }
       })
       .then(result => {
-        console.log("result", result)
         this.setState({ productdetails: result.data.product })
       })
   }
 
   render() {
-    // const id = this.props.match.params.id
-
-    console.log("window.location.href", window.location.pathname.replace("/products", ""))
-    return <div></div>
+    console.log("productdetails", this.state.productdetails)
+    if (!this.state.productdetails) {
+      return null
+    }
+    return this.state.productdetails.gallery.map(imageSrc => {
+      return <img className="productImage" src={imageSrc} alt={this.state.productId} />
+    })
   }
 }
 
